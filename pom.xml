@@ -61,7 +61,7 @@
         <dependency>
             <groupId>org.jenkins-ci</groupId>
             <artifactId>trilead-ssh2</artifactId>
-            <version>build217-jenkins-9</version>
+            <version>build217-jenkins-10</version>
             <scope>provided</scope><!-- use the dependency in core for now -->
         </dependency>
         <dependency>
