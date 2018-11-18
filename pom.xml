@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>trilead-api</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>hpi</packaging>
 
 
@@ -43,7 +43,7 @@
         <connection>scm:git:git://github.com/jenkinsci/trilead-api-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/trilead-api-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/trilead-api-plugin</url>
-      <tag>HEAD</tag>
+      <tag>trilead-api-1.0.1</tag>
   </scm>
 
     <properties>
