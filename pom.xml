@@ -5,11 +5,12 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>3.19</version>
+        <version>3.45</version>
+        <relativePath />
     </parent>
 
     <artifactId>trilead-api</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>${revision}${changelist}</version>
     <packaging>hpi</packaging>
 
 
@@ -17,11 +18,11 @@
     <description>
         This plugin provides access to Trilead without having to bundle Trilead in Jenkins core
     </description>
-    <url>http://wiki.jenkins-ci.org/display/JENKINS/Trilead+API+Plugin</url>
+    <url>https://wiki.jenkins-ci.org/display/JENKINS/Trilead+API+Plugin</url>
     <licenses>
         <license>
             <name>The MIT license</name>
-            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <url>https://www.opensource.org/licenses/mit-license.php</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -43,11 +44,13 @@
         <connection>scm:git:git://github.com/jenkinsci/trilead-api-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/trilead-api-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/trilead-api-plugin</url>
-      <tag>trilead-api-1.0.1</tag>
+        <tag>${scmTag}</tag>
   </scm>
 
     <properties>
-      <jenkins.version>2.150.1</jenkins.version>
+      <revision>1.0.4</revision>
+      <changelist>-SNAPSHOT</changelist>
+      <jenkins.version>2.182-rc28414.f23b93a6d5e9</jenkins.version>
       <java.level>8</java.level>
     </properties>
 
@@ -83,31 +86,4 @@
             </exclusions>
         </dependency>
     </dependencies>
-
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.jenkins-ci.tools</groupId>
-                <artifactId>maven-hpi-plugin</artifactId>
-                <version>${hpi-plugin.version}</version>
-                <configuration>
-                    <!-- once all plugins that use Classloader based checks of Trilead classes depend on this plugin,
-                    we can enable the following line -->
-                    <!-- <maskClasses>com.trilead.ssh2</maskClasses> -->
-                    <!-- once all plugins that use trilead depend on this plugin, we can enable the following line -->
-                    <!-- <globalMaskClasses>com.trilead.ssh2</globalMaskClasses> -->
-                </configuration>
-            </plugin>
-            <plugin> 
-              <groupId>org.apache.maven.plugins</groupId> 
-              <artifactId>maven-javadoc-plugin</artifactId> 
-              <configuration> 
-                <source>8</source> 
-              </configuration> 
-            </plugin> 
-        </plugins>
-    </build>
-
-
 </project>
