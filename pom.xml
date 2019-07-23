@@ -18,7 +18,7 @@
     <description>
         This plugin provides access to Trilead without having to bundle Trilead in Jenkins core
     </description>
-    <url>https://plugins.jenkins.io/trilead-api</url>
+    <url>https://github.com/jenkinsci/trilead-api-plugin</url>
     <licenses>
         <license>
             <name>The MIT license</name>
