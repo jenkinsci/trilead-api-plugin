@@ -99,6 +99,7 @@
     </dependencies>
 
     <build>
+      <plugins>
       <plugin>
           <artifactId>maven-enforcer-plugin</artifactId>
           <executions>
@@ -114,5 +115,6 @@
               </execution>
           </executions>
       </plugin>
+      </plugins>
     </build>
 </project>
