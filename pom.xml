@@ -84,7 +84,7 @@
         <dependency>
             <groupId>org.jenkins-ci</groupId>
             <artifactId>trilead-ssh2</artifactId>
-            <version>build-217-jenkins-25</version>
+            <version>build-217-jenkins-25-rc189.f70b55c2626a</version>
         </dependency>
         <dependency>
             <groupId>org.kohsuke</groupId>
