@@ -51,7 +51,7 @@
       <revision>1.0.14</revision>
       <changelist>-SNAPSHOT</changelist>
       <gitHubRepo>jenkinsci/trilead-api-plugin</gitHubRepo>
-      <jenkins.version>2.204</jenkins.version>
+      <jenkins.version>2.204.3</jenkins.version>
       <java.level>8</java.level>
     </properties>
 
@@ -81,11 +81,28 @@
       </dependencies>
     </dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.connectbot</groupId>
+        <artifactId>sshlib</artifactId>
+        <version>2.2.16-SNAPSHOT</version>
+        <exclusions>
+          <exclusion>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jzlib</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>com.google.crypto.tink</groupId>
+        <artifactId>tink</artifactId>
+        <version>1.4.0</version>
+      </dependency>
+      <!--
         <dependency>
             <groupId>org.jenkins-ci</groupId>
             <artifactId>trilead-ssh2</artifactId>
             <version>build-217-jenkins-27</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.kohsuke</groupId>
             <artifactId>trilead-putty-extension</artifactId>
