@@ -52,7 +52,7 @@
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/trilead-api-plugin</gitHubRepo>
         <jenkins.version>2.319</jenkins.version>
-        <java.level>8</java.level>
+        <java.level>11</java.level>
     </properties>
 
     <repositories>
