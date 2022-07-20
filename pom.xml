@@ -84,7 +84,13 @@
         <dependency>
             <groupId>org.jenkins-ci</groupId>
             <artifactId>trilead-ssh2</artifactId>
-            <version>build-217-jenkins-27</version>
+            <version>build-217-jenkins-211.vbb42cae44b18</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.protobuf</groupId>
+                    <artifactId>protobuf-java</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.kohsuke</groupId>
@@ -96,6 +102,11 @@
                     <artifactId>trilead-ssh2</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.16.1</version>
         </dependency>
     </dependencies>
 </project>
