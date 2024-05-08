@@ -25,7 +25,6 @@ package org.jenkinsci.plugins.trileadapi;
 
 import com.cloudbees.jenkins.plugins.sshcredentials.SSHAuthenticator;
 import com.cloudbees.jenkins.plugins.sshcredentials.SSHUserPrivateKey;
-import com.cloudbees.jenkins.plugins.sshcredentials.impl.TrileadSSHPublicKeyAuthenticator;
 import com.cloudbees.plugins.credentials.CredentialsDescriptor;
 import com.cloudbees.plugins.credentials.CredentialsScope;
 import com.cloudbees.plugins.credentials.common.StandardUsernameCredentials;
@@ -148,7 +147,7 @@ public class TrileadSSHPublicKeyAuthenticatorTest {
             int port = (Integer)invoke(sshd, "getPort", null, null);
             connection = new Connection("localhost", port);
             connection.connect((hostname, port1, serverHostKeyAlgorithm, serverHostKey) -> true);
-            com.cloudbees.jenkins.plugins.sshcredentials.impl.TrileadSSHPublicKeyAuthenticator instance =
+            TrileadSSHPublicKeyAuthenticator instance =
                     new TrileadSSHPublicKeyAuthenticator(connection, user);
             assertThat(instance.getAuthenticationMode(), is(SSHAuthenticator.Mode.AFTER_CONNECT));
             assertThat(instance.canAuthenticate(), is(true));

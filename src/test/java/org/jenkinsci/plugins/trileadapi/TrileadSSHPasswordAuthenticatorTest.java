@@ -26,7 +26,6 @@ package org.jenkinsci.plugins.trileadapi;
 import com.cloudbees.jenkins.plugins.sshcredentials.SSHAuthenticator;
 import com.cloudbees.jenkins.plugins.sshcredentials.SSHAuthenticatorFactory;
 import com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPassword;
-import com.cloudbees.jenkins.plugins.sshcredentials.impl.TrileadSSHPasswordAuthenticator;
 import com.cloudbees.plugins.credentials.CredentialsScope;
 import com.cloudbees.plugins.credentials.common.StandardUsernamePasswordCredentials;
 import com.trilead.ssh2.Connection;
@@ -83,8 +82,8 @@ public class TrileadSSHPasswordAuthenticatorTest {
     public void dontTestKeyboardInteractive() throws Exception {
         connection = new Connection("localhost");
         connection.connect(new NoVerifier());
-        com.cloudbees.jenkins.plugins.sshcredentials.impl.TrileadSSHPasswordAuthenticator instance =
-                new com.cloudbees.jenkins.plugins.sshcredentials.impl.TrileadSSHPasswordAuthenticator(connection, new BasicSSHUserPassword(CredentialsScope.SYSTEM,
+        TrileadSSHPasswordAuthenticator instance =
+                new TrileadSSHPasswordAuthenticator(connection, new BasicSSHUserPassword(CredentialsScope.SYSTEM,
                         null, "....",  // <---- put your username here
                         "....",  // <---- put your password here
                         null));
@@ -105,7 +104,7 @@ public class TrileadSSHPasswordAuthenticatorTest {
         int port = (Integer)invoke(sshd, "getPort", null, null);
         connection = new Connection("localhost", port);
         connection.connect(new NoVerifier());
-        com.cloudbees.jenkins.plugins.sshcredentials.impl.TrileadSSHPasswordAuthenticator instance =
+        TrileadSSHPasswordAuthenticator instance =
                 new TrileadSSHPasswordAuthenticator(connection, user);
         assertThat(instance.getAuthenticationMode(), is(SSHAuthenticator.Mode.AFTER_CONNECT));
         assertThat(instance.canAuthenticate(), is(true));
