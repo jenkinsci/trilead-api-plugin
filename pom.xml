@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.88</version>
+        <version>5.2</version>
         <relativePath />
     </parent>
 
@@ -51,7 +51,8 @@
         <revision>2</revision>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/trilead-api-plugin</gitHubRepo>
-        <jenkins.version>2.462.3</jenkins.version>
+        <jenkins.baseline>2.479</jenkins.baseline>
+        <jenkins.version>${jenkins.baseline}.1</jenkins.version>
         <hpi.compatibleSinceVersion>2.0.0</hpi.compatibleSinceVersion>
     </properties>
 
@@ -73,8 +74,8 @@
       <dependencies>
         <dependency>
           <groupId>io.jenkins.tools.bom</groupId>
-          <artifactId>bom-2.462.x</artifactId>
-          <version>3613.v584fca_12cf5c</version>
+            <artifactId>bom-${jenkins.baseline}.x</artifactId>
+            <version>3613.v584fca_12cf5c</version>
           <type>pom</type>
           <scope>import</scope>
         </dependency>
