@@ -80,13 +80,17 @@
           <type>pom</type>
           <scope>import</scope>
         </dependency>
+        <dependency>
+            <groupId>com.google.errorprone</groupId>
+            <artifactId>error_prone_annotations</artifactId>
+        </dependency>
       </dependencies>
     </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.jenkins-ci</groupId>
             <artifactId>trilead-ssh2</artifactId>
-            <version>trilead-ssh2-build-217-jenkins-17</version>
+            <version>build-217-jenkins-324.v1d9a_9f4d065e</version>
             <exclusions>
                 <!-- Provided by gson-api plugin -->
                 <exclusion>
