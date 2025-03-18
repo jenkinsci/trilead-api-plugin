@@ -86,7 +86,7 @@
         <dependency>
             <groupId>org.jenkins-ci</groupId>
             <artifactId>trilead-ssh2</artifactId>
-            <version>build-217-jenkins-324.v1d9a_9f4d065e</version>
+            <version>build-217-jenkins-331.v721a_1861cff6</version>
             <exclusions>
                 <!-- Not needed at runtime -->
                 <exclusion>
