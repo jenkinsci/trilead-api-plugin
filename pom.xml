@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>5.19</version>
+    <version>5.24</version>
     <relativePath />
   </parent>
 
@@ -52,6 +52,8 @@
     <jenkins.baseline>2.504</jenkins.baseline>
     <jenkins.version>${jenkins.baseline}.1</jenkins.version>
     <hpi.compatibleSinceVersion>2.0.0</hpi.compatibleSinceVersion>
+    <hpi.strictBundledArtifacts>true</hpi.strictBundledArtifacts>
+    <hpi.bundledArtifacts>jbcrypt,tink,trilead-putty-extension,trilead-ssh2</hpi.bundledArtifacts>
     <spotless.check.skip>false</spotless.check.skip>
   </properties>
 
@@ -80,6 +82,11 @@
       <artifactId>trilead-ssh2</artifactId>
       <version>build-217-jenkins-333.v769a_63c2340e</version>
       <exclusions>
+        <!-- Avoid JSR-305 in the Jenkins ecosystem -->
+        <exclusion>
+          <groupId>com.google.code.findbugs</groupId>
+          <artifactId>jsr305</artifactId>
+        </exclusion>
         <!-- Provided by gson-api plugin -->
         <exclusion>
           <groupId>com.google.code.gson</groupId>
