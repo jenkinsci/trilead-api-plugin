@@ -53,6 +53,8 @@
     <jenkins.version>${jenkins.baseline}.1</jenkins.version>
     <hpi.compatibleSinceVersion>2.0.0</hpi.compatibleSinceVersion>
     <spotless.check.skip>false</spotless.check.skip>
+    <hpi.bundledArtifacts>jbcrypt,tink,trilead-putty-extension,trilead-ssh2</hpi.bundledArtifacts>
+    <hpi.strictBundledArtifacts>true</hpi.strictBundledArtifacts>
   </properties>
 
   <dependencyManagement>
