@@ -78,7 +78,7 @@
     <dependency>
       <groupId>org.jenkins-ci</groupId>
       <artifactId>trilead-ssh2</artifactId>
-      <version>build-217-jenkins-333.v769a_63c2340e</version>
+      <version>build-217-jenkins-371.vc1d30dc5a_b_32</version>
       <exclusions>
         <!-- Provided by gson-api plugin -->
         <exclusion>
